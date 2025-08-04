@@ -13,6 +13,76 @@
       "finca": "La Esperanza",
       "ciudad": "Pasto",
       "cultivo": "Maíz"
-    }
+    },
+    {
+    "id": "1",
+    "nombre": "Carlos López",
+    "finca": "La Bonanza",
+    "ciudad": "Cumbal",
+    "cultivo": "Frijol"
+  },
+  {
+    "id": "2",
+    "nombre": "Pedro Martínez",
+    "finca": "El Porvenir",
+    "ciudad": "Pasto",
+    "cultivo": "Papa"
+  },
+  {
+    "id": "3",
+    "nombre": "Laura Pérez",
+    "finca": "El Porvenir",
+    "ciudad": "Ospina",
+    "cultivo": "Cebolla"
+  },
+  {
+    "id": "4",
+    "nombre": "Diana Martínez",
+    "finca": "El Refugio",
+    "ciudad": "Sandoná",
+    "cultivo": "Maíz"
+  },
+  {
+    "id": "5",
+    "nombre": "Pedro Gómez",
+    "finca": "El Porvenir",
+    "ciudad": "Pasto",
+    "cultivo": "Café"
+  },
+  {
+    "id": "6",
+    "nombre": "María Pérez",
+    "finca": "El Refugio",
+    "ciudad": "Ipiales",
+    "cultivo": "Café"
+  },
+  {
+    "id": "7",
+    "nombre": "Lucía Ruiz",
+    "finca": "Agrovida",
+    "ciudad": "Mallama",
+    "cultivo": "Papa"
+  },
+  {
+    "id": "8",
+    "nombre": "Juan López",
+    "finca": "Santa Rosa",
+    "ciudad": "Ospina",
+    "cultivo": "Trigo"
+  },
+  {
+    "id": "9",
+    "nombre": "Juan Vargas",
+    "finca": "El Refugio",
+    "ciudad": "Sandoná",
+    "cultivo": "Trigo"
+  },
+  {
+    "id": "10",
+    "nombre": "María Castro",
+    "finca": "La Bonanza",
+    "ciudad": "Ospina",
+    "cultivo": "Tomate"
+  }
   ]
 }

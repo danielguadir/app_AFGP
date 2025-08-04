@@ -1,8 +1,8 @@
 // src/pages/users/ProductoresPage.jsx
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { fetchUsers } from "../../features/users/usersThunks";
-import UsersTable from "./UsersTable";
+import { fetchUsers } from "../../features/producers/producersThunks";
+import UsersTable from "./ProductorTable";
 
 function ProductoresPage() {
   const dispatch = useDispatch();

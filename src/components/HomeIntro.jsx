@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom"; // src/components/HomeIntro.jsx
 import "../App.css";
 import "../index.css";
-import UserSearchBar from "../search/UserSearchBar";
-import UserSearchName from "../search/UserSearchName"; // Asegúrate de que este componente exista
-import UserSearchCity from "../search/UserSearchCity"; // Asegúrate de que este componente exista
+import ProductorSearchBar from "../search/ProductorSearchBar";
+import ProductorSearchName from "../search/ProductorSearchName"; // Asegúrate de que este componente exista
+import ProductorSearchCity from "../search/ProductorSearchCity"; // Asegúrate de que este componente exista
 
 function HomeIntro() {
   const navigate = useNavigate();
@@ -17,15 +17,15 @@ function HomeIntro() {
         para mostrar y consultar productores.
       </p>
 
-      <button onClick={() => navigate("/productores")}>
+      <button className="btn-productores" onClick={() => navigate("/productores")}>
         Ver todos los productores
       </button>
       <br />
        <br />
        <div className="search-container">
-      <UserSearchBar />
-      <UserSearchName />
-      <UserSearchCity />
+      <ProductorSearchBar />
+      <ProductorSearchName />
+      <ProductorSearchCity />
       </div>
     </div>
   );

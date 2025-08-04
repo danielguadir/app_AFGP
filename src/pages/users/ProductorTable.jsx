@@ -4,8 +4,8 @@ import "../../App.css";
 import "../../index.css";
 import { useSelector } from "react-redux";
 
-function UsersTable() {
-  const { users } = useSelector((state) => state.users);
+function ProductorTable() {
+  const { users } = useSelector((state) => state.productores);
 
  return (
     <table className="User-table" border={1} cellPadding={8}>
@@ -33,4 +33,4 @@ function UsersTable() {
   );
 }
 
-export default UsersTable;
+export default ProductorTable;

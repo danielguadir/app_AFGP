@@ -1,19 +1,17 @@
-
 import { useNavigate } from "react-router-dom";
-import { fetchCities } from "../features/users/usersThunks"; // Asegúrate de que esta función exista
+import { fetchCiudades } from "../features/producers/producersThunks"; // ← Import corregido
 import { useState, useEffect } from "react";
 
-
-function UserSearchCity() {
-  const [userCity, setUserCity] = useState("");
+function ProductorSearchCity() {
+  const [productorCity, setProductorCity] = useState("");
   const [error, setError] = useState(null);
-  const [cities, setCities] = useState([]); // Estado para almacenar las ciudades
+  const [cities, setCities] = useState([]);
   const navigate = useNavigate();
 
-    useEffect(() => {
+  useEffect(() => {
     const getCities = async () => {
       try {
-        const data = await fetchCities(); // aqui uso  la función importada
+        const data = await fetchCiudades(); // ← Función correcta desde producersThunks
         setCities(data);
       } catch (err) {
         setError("Error al cargar las ciudades.");
@@ -22,28 +20,23 @@ function UserSearchCity() {
     getCities();
   }, []);
 
- 
-
-   //  Buscar ciudad
   const handleSearch = () => {
-    if (userCity.trim() === "") {
-      setError("Por favor, ingresa una ciudad correcta de usuario.");
+    if (productorCity.trim() === "") {
+      setError("Por favor, selecciona una ciudad.");
       return;
     }
     setError(null);
-    navigate(`/userbycity/${encodeURIComponent(userCity)}`);
+    navigate(`/productorbycity/${encodeURIComponent(productorCity)}`);
   };
 
-  //  Interfaz de búsqueda
   return (
     <div className="input-container2">
       <select
         className="user-input"
-        value={userCity}
-        onChange={(e) => setUserCity(e.target.value)}
+        value={productorCity}
+        onChange={(e) => setProductorCity(e.target.value)}
       >
         <option value="">Seleccione una ciudad</option>
-
         {cities.map((city, index) => (
           <option key={index} value={city}>
             {city}
@@ -76,6 +69,4 @@ function UserSearchCity() {
   );
 }
 
-export default UserSearchCity;
-
- 
+export default ProductorSearchCity;

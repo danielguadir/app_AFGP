@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUsers } from "../../features/users/usersThunks.js";
-import UsersTable from "./UsersTable.jsx"; // ✅ correcto
+import { fetchUsers } from "../../features/producers/producersThunks.js";
+import UsersTable from "./ProductorTable.jsx"; // ✅ correcto
 
 import WithLoader from "../../components/WithLoader.jsx";
 
-function UsersList() {
+function ProductorList() {
   const dispatch = useDispatch();
-  const { users, loading, error } = useSelector((state) => state.users);
+  const { users, loading, error } = useSelector((state) => state.productores);
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -23,4 +23,4 @@ function UsersList() {
   );
 }
 
-export default UsersList;
+export default ProductorList;

@@ -1,18 +1,18 @@
-import { fetchUserByCity } from "../../features/users/usersThunks";
+import { fetchProductorByCity } from "../../features/producers/producersThunks";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import WithLoader from "../../components/WithLoader";
 
-function UserByCity() {
+function ProductorByCity() {
   const dispatch = useDispatch();
-  const { loading, users, error } = useSelector((state) => state.users);
-  const { city } = useParams(); // 👈 capturamos la ciudad desde la URL
+  const { loading, users, error } = useSelector((state) => state.productores);
+  const { city } = useParams(); //  capturamos la ciudad desde la URL
 
   useEffect(() => {
     if (!city || city.trim() === "") return;
-    dispatch(fetchUserByCity(city));
+    dispatch(fetchProductorByCity(city));
   }, [city, dispatch]);
 
   return (
@@ -21,15 +21,15 @@ function UserByCity() {
         {Array.isArray(users) ? (
           users.map((u) => (
             <div key={u.id}>
-              <h2>Detalles del Usuario: {u.name}</h2>
+              <h2>Detalles del Productor: {u.nombre}</h2>
               <p>
-                <strong>ID:</strong> {u.id}
+                <strong>Ciudad:</strong> {u.ciudad}
               </p>
               <p>
-                <strong>Email:</strong> {u.email}
+                <strong>Cultivo:</strong> {u.cultivo}
               </p>
               <p>
-                <strong>Teléfono:</strong> {u.phone}
+                <strong>Finca:</strong> {u.finca}
               </p>
               <p>
                 <strong>Website:</strong> {u.website}
@@ -44,4 +44,4 @@ function UserByCity() {
     </WithLoader>
   );
 }
-export default UserByCity;
+export default ProductorByCity;

@@ -48,7 +48,7 @@ button {
   color: #ededf3;
 }
 button:hover {
-  border-color: #0909fc;
+  border-color: #048520;
 }
 button:focus,
 button:focus-visible {
@@ -64,6 +64,15 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #4f1dda;
+    background-color: #015f0ea6;
+
   }
+  
+}
+.bton-productores{
+  background-color: #015f0ea6;
+}
+.btn-lupa{
+  background-color: #015f0ea6;  
+
 }

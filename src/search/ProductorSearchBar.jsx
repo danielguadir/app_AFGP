@@ -1,35 +1,33 @@
-/*
-Este componente crea una barra de búsqueda por ID de usuario. El usuario escribe un número,
- y al hacer clic en el botón, si el campo no está vacío, redirige a la ruta /usuarios/:id, 
-donde se mostrará la información de ese usuario. Si el campo está vacío, muestra un mensaje de error.
-*/
+// src/search/ProductorSearchById.jsx
+
 import "../App.css";
 import "../index.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function UserSearchBar() {
-  const [userId, setUserId] = useState("");
+function ProductorSearchById() {
+  const [productorId, setProductorId] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    if (userId.trim() === "") {
-      setError("Por favor, ingresa un ID de usuario.");
+    if (productorId.trim() === "") {
+      setError("Por favor, ingresa un ID de productor.");
       return;
     } else {
       setError(null);
-      navigate(`/usuarios/${userId}`);
+      navigate(`/productores/${productorId}`);
     }
   };
+
   return (
     <div className="input-container1">
       <input
         className="user-input"
         type="number"
-        placeholder="Ingrese un ID de usuario"
-        value={userId}
-        onChange={(e) => setUserId(e.target.value)}
+        placeholder="Ingrese un ID de productor"
+        value={productorId}
+        onChange={(e) => setProductorId(e.target.value)}
         required
       />
 
@@ -52,8 +50,10 @@ function UserSearchBar() {
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
       </button>
+
       {error && <p className="error-message">{error}</p>}
     </div>
   );
 }
-export default UserSearchBar;
+
+export default ProductorSearchById;
