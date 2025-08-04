@@ -10,15 +10,15 @@ function HomeIntro() {
 
   return (
     <div className="home-intro">
-      <h1>App de usuarios</h1>
+      <h1>App de productores</h1>
       <p>
-        Esta aplicación utiliza la API pública: <br />
-        <code>https://jsonplaceholder.typicode.com/users</code> <br />
-        para mostrar y consultar usuarios.
+        Esta aplicación utiliza tu propia API local: <br />
+        <code>http://localhost:3000/productores</code> <br />
+        para mostrar y consultar productores.
       </p>
 
-      <button onClick={() => navigate("/usuarios")}>
-        Ver todos los usuarios
+      <button onClick={() => navigate("/productores")}>
+        Ver todos los productores
       </button>
       <br />
        <br />

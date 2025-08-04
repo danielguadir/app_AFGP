@@ -1,0 +1,18 @@
+{
+  "productores": [
+    {
+      "id": 1,
+      "nombre": "Ana López",
+      "finca": "El Porvenir",
+      "ciudad": "Cumbal",
+      "cultivo": "Papa"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos Ruiz",
+      "finca": "La Esperanza",
+      "ciudad": "Pasto",
+      "cultivo": "Maíz"
+    }
+  ]
+}

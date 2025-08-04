@@ -75,8 +75,9 @@ const usersSlice = createSlice({
   state.error = action.payload; // mensaje de error
 })
       // Redirige a buscar usuario por ciudad
+
 .addCase(fetchUserByCity.pending, (state) => {
-  state.users = {};
+  state.users = [];
   state.loading = true;
   state.error = null;
 })

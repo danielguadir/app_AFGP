@@ -7,28 +7,25 @@ import { useSelector } from "react-redux";
 function UsersTable() {
   const { users } = useSelector((state) => state.users);
 
-  return (
+ return (
     <table className="User-table" border={1} cellPadding={8}>
       <thead>
         <tr>
           <th>ID</th>
           <th>Nombre</th>
-          <th>Email</th>
-          <th>Teléfono</th>
-          <th>Sitio Web</th>
-
-          <th>ciudad</th>
+          <th>Finca</th>
+          <th>Ciudad</th>
+          <th>Cultivo</th>
         </tr>
       </thead>
       <tbody>
-        {users.map((user) => (
-          <tr key={user.id}>
-            <td>{user.id}</td>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.phone}</td>
-            <td>{user.website}</td>
-            <td>{user.address.city}</td>
+        {Array.isArray(users) && users.map((prod) => (
+          <tr key={prod.id}>
+            <td>{prod.id}</td>
+            <td>{prod.nombre}</td>
+            <td>{prod.finca}</td>
+            <td>{prod.ciudad}</td>
+            <td>{prod.cultivo}</td>
           </tr>
         ))}
       </tbody>

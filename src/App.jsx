@@ -7,6 +7,7 @@ import UsersList from "./pages/users/UsersList";
 import UserDetail from "./pages/users/UserDetail";
 import UserByName from "./pages/users/UserByName"; 
 import UserByCity from "./pages/users/UserByCity"; 
+import ProductoresPage from "./pages/users/ProductoresPage";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
 
       {/* Ruta para buscar un usuario por ciudad */}
       <Route path="/userbycity/:city" element={<UserByCity />} />
+
+      <Route path="/productores" element={<ProductoresPage />} />
+      {/* Ruta para ver todos los productores */}
+
     </Routes>
   );
 }

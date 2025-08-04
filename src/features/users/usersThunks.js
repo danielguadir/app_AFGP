@@ -84,7 +84,7 @@ const fetchUsers = createAsyncThunk(
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
+        "http://localhost:3000/productores"
       );
       return response.data;
     } catch (error) {
